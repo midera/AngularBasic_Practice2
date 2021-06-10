@@ -1,0 +1,6 @@
+<app-user *ngFor="let user of users" [user]="user" (userUp)="showDetails($event)"></app-user>
+<hr>
+<div *ngIf="userDetails">
+  {{userDetails.id}} - {{userDetails.name}} - {{userDetails.email}}
+  <button (click)="login()">Login</button>
+</div>
